@@ -1,0 +1,478 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#0b0920 ; 
+    color: #445ba5; 
+   
+  transition: background-color 0.3s ease, color 0.3s ease;
+    
+  }
+  
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #030813; /* Dark background */
+  color: #d8c3c3; /* Light text */
+}
+
+/* Dark Mode for Cards and Sections */
+body.dark-mode .education-section,
+body.dark-mode .skills-section {
+  background-color: #222f3d; /* Darker shade for sections */
+  box-shadow: 0 4px 8px rgba(226, 219, 219, 0.658);
+  color: #fcfcfcdc; /* Text color */
+}
+body.dark-mode .section-title {
+  color: #d8c3c3; /* White text in dark mode */
+  background-color:#222f3d;
+}
+
+body.dark-mode .education-card,
+body.dark-mode .skill {
+  background-color: #222f3d; /* Darker card background */
+  color: #d8c3c3; /* Text color */
+  border: 1px solid #233554; /* Subtle border */
+  box-shadow: 0 4px 8px rgba(255, 252, 252, 0.507);
+}
+body.dark-mode .education-card h3,
+body.dark-mode .education-card p {
+  color: #d8c3c3; /* White text in dark mode */
+}
+
+body.dark-mode .courses-title{
+  color: #d8c3c3;
+}
+body.dark-mode .skill:hover,
+body.dark-mode .education-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+body.dark-mode .skill-name{
+  color: #d8c3c3;
+}
+/* Button Styling */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #f0f4f8;
+  color: #0a192f;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+  transform: scale(1.1);
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #112240;
+  color: #f0f4f8;
+}
+
+
+
+/* Dark Mode for Courses Section */
+body.dark-mode .course-list {
+  background-color: #222f3d; /* Darker background for cards */
+  box-shadow: 0 4px 8px rgb(255, 252, 252); /* Subtle light shadow */
+}
+
+body.dark-mode .course-list li {
+  background-color: #222f3d; /* Dark background for list items */
+  color: #f0f4f8; /* Light text color */
+  box-shadow: 0 4px 8px rgba(255, 252, 252, 0.315);
+}
+
+body.dark-mode .course-list li:hover {
+  background-color: #2b3b54; /* Darker shade on hover */
+  transform: scale(1.03); /* Same hover zoom */
+}
+
+
+
+  /*---------------------------*/
+  /* Theme Toggle Button */
+.theme-toggle {
+  position: fixed; /* Fix the button position */
+  bottom: 20px; /* Distance from the bottom */
+  left: 20px; /* Distance from the left */
+  background-color: #f0f4f8;
+  color: #1d242e;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%; /* Circular button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.theme-toggle:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #0a192f;
+  color: #f0f4f8;
+}
+
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: center; /* Center the navbar and weather together */
+    align-items: center; /* Align items vertically */
+    gap: 15px; /* Add space between the navbar and the weather widget */
+    margin: 20px auto; /* Center the header container */
+    position: relative;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a9b1c9; /* Light color for the navbar */
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: max-content; /* Wrap the content */
+  }
+  
+  .nav-link {
+    color: #5e6c83; /* Dark text color */
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    
+    color: #000000;
+  }
+  
+  .nav-link.active {
+    background-color: #ffffff; /* Highlight active link */
+    color: #0a192f;
+    font-weight: bold;
+  }
+  
+  /* Weather Widget */
+  .weather-widget {
+    background-color: #ffffff; /* White background */
+    color: #0a192f; /* Dark text color */
+    width: 50px; /* Fixed width for circle */
+    height: 50px; /* Fixed height for circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Make it circular */
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .weather-widget:hover {
+    background-color: #64ffda; /* Accent color on hover */
+    color: #0a192f;
+  }
+  
+  
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background: #030813 url('background-pattern.svg') no-repeat center center/cover;
+    text-align: center;
+    padding-top: 50px; /* Add more space above the hero content */
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #64ffda;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    color: #ccd6f6;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #8892b0;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Container */
+.button-container {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* General Button Styles */
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and icon */
+    padding: 10px 20px;
+    border: 2px solid #ccd6f6;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  }
+  
+  .button img.button-icon {
+    width: 20px; /* Icon size */
+    height: 20px;
+  }
+  
+  /* GitHub Button */
+  .github-button {
+    background-color: #ffffff; /* White background */
+    color: #0a192f; /* Dark text */
+  }
+  
+  .github-button:hover {
+    background-color: #ccd6f6;
+    color: #0a192f;
+    border: 2px solid #0a192f;
+  }
+  
+  /* LinkedIn Button */
+  .linkedin-button {
+    background-color: #0a192f; /* Dark background */
+    color: #ffffff; /* White text */
+  }
+  
+  .linkedin-button:hover {
+    background-color: #ccd6f6;
+    color: #0a192f;
+    border: 2px solid #64ffda; /* Accent color */
+  }
+  
+  /* Home Icon */
+.home-icon {
+    position: fixed; /* Keeps the icon in a fixed position */
+    bottom: 20px; /* Distance from the bottom of the page */
+    right: 20px; /* Distance from the right of the page */
+    width: 50px; /* Icon size */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #64ffda; /* Background color for the icon */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+  }
+  
+  .home-icon img {
+    width: 24px; /* Size of the home icon image */
+    height: 24px;
+  }
+  
+  .home-icon:hover {
+    background-color: #0a192f; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon */
+  }
+  
+  /* Education Section */
+.education-section {
+  margin: 50px auto;
+  max-width: 900px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section-title {
+ 
+  font-size: 2rem;
+  color: #0a192f;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* White background for the title */
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Education Card */
+.education-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-logo img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.education-details h3 {
+  font-size: 1.5rem;
+  color: #0a192f;
+  margin: 0;
+}
+
+.education-details p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Courses Section */
+.course-container {
+  margin-top: 30px;
+}
+
+.courses-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #0a192f;
+}
+
+.course-lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.course-list {
+  flex: 1;
+  background-color: #eceff1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-list h4 {
+  font-size: 1.2rem;
+  color: #0a192f;
+  margin-bottom: 10px;
+}
+
+/* Course Lists */
+.course-list ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+}
+
+.course-list li {
+  background-color: #f0f4f8; /* Light background for each course */
+  margin: 10px 0; /* Space between courses */
+  padding: 10px 15px; /* Padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  font-size: 1rem;
+  color: #0a192f; /* Dark text color */
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom-in effect */
+}
+
+.course-list li:hover {
+  transform: scale(1.05); /* Slight zoom-in on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background-color: #a3b2c0; /* Accent color for hover */
+  color: #0a192f; /* Maintain readable text color */
+}
+
+/* Skills Section - Card Background */
+.skills-section {
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light card background */
+  border-radius: 10px; /* Rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 900px; /* Limit width */
+}
+
+
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Individual Skill Card */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* Card background */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img {
+  width: 60px; /* Icon size */
+  height: 60px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.skill p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0a192f;
+  margin: 0;
+}
+
+.skill:hover {
+  transform: scale(1.1); /* Slight zoom-in */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow lift */
+}

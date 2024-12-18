@@ -1,50 +1,49 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const path = require('path');
+const express = require("express");
+const nodemailer = require("nodemailer");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors()); // Enable CORS for cross-origin requests
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));  // Serve static files from the 'public' directory
 
-// Route to handle form submission
-app.post('/send_mail', (req, res) => {
-  const { email, message } = req.body;
+// POST route for contact form submission
+app.post("/send-message", (req, res) => {
+  const { name, email, message } = req.body;
 
+  // Nodemailer transport setup (using Gmail SMTP)
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
-      user: 'zeeshan.rafaqat@gmail.com',
-      pass: 'fuckthisshit@',
+      user: "zeewar095@gmail.com", // Your email address
+      pass: "irrb xikw zkrr kgsv", // App-specific password (not your regular Gmail password)
     },
   });
 
+  // Email content
   const mailOptions = {
-    from: email,
-    to: 'zeeshan.rafaqat@gmail.com',
-    subject: 'New Contact Form Submission',
-    text: `Email: ${email}\n\nMessage:\n${message}`,
+    from: email, // User's email
+    to: "zeewar095@gmail.com", // Your email to receive the message
+    subject: `New Contact Message from ${name}`,
+    text: `You received a new message from ${name} (${email}):\n\n${message}`,
   };
 
+  // Send email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error('Error:', error); // Log the detailed error message
-      return res.status(500).send('There was an error sending your message. Please try again later.');
+      console.error("Error sending email:", error);
+      return res.status(500).json({ message: "Failed to send message" });
     }
-    res.send('Thank you for contacting me. I will get back to you shortly.');
+    console.log("Email sent:", info.response);
+    res.status(200).json({ message: "Message sent successfully!" });
   });
 });
 
-// Serve index.html at the root
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});

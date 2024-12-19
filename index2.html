@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeeshan R | Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  
+
+
+    <header class="header-container">
+       <!-- Menu Toggle Button -->
+  <button id="menu-toggle" class="menu-toggle">
+    <img src="./assets/imgs/menu.png" alt="Menu Icon" />
+  </button>
+        <nav class="navbar">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div id="weather-widget" class="weather-widget">
+          <span id="weather-temp">--°C</span>
+        </div>
+      </header>
+      
+      
+      <!-- Dark Mode Toggle Button -->
+<button id="theme-toggle" class="theme-toggle">🌙</button>
+
+
+  <main id="home" class="hero-section">
+    <div class="hero-content">
+      <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <h1>Hello, I'm Zeeshan.</h1>
+      <p>
+        I'm a software engineer passionate about building user-friendly applications and solving challenging problems. Currently focusing on web development using JavaScript, React, and Node.js.
+      </p>
+      <div class="button-container">
+        <a href="https://github.com/zeeshanrw" target="_blank" class="button github-button">
+          <img src="./assets/imgs/github.png" alt="GitHub" class="button-icon" /> GitHub
+        </a>
+        <a href="https://linkedin.com/in/zeeshan-rafaqat" target="_blank" class="button linkedin-button">
+          <img src="./assets/imgs/linkedin.png" alt="LinkedIn" class="button-icon" /> LinkedIn
+        </a>
+      </div>
+      
+    </div>
+  </main>
+
+<!--background animation-->
+
+<!--End background animation-->
+<!--education start-->
+<section id="education" class="education-section">
+  <h2 class="section-title">My Education</h2>
+  <div class="education-card">
+    <div class="education-logo">
+      <img id="yorku-logo" src="./assets/imgs/yorkUlogo.png" alt="York University Logo" />
+    </div>
+    <div class="education-details">
+      <h3>Honours BSc Computer Science</h3>
+      <p>Lassonde School of Engineering</p>
+      <p>Graduation: 2026</p>
+    </div>
+  </div>
+
+  <div class="course-container">
+    <h3 class="courses-title">Courses</h3>
+    <div class="course-lists">
+      <!-- First Half -->
+      <div class="course-list">
+      
+        <ul>
+          <li>Research Directions in Computing</li>
+          <li>Net-Centric Introduction to Computing</li>
+          <li>Introduction to Computer Science and Programming</li>
+          <li>Discrete Mathematics for Computer Science</li>
+          <li>Introduction to Object Oriented Programming</li>
+          <li>Introduction to the Theory of Computation</li>
+          <li>Computer Organization</li>
+        </ul>
+      </div>
+
+      <!-- Second Half -->
+      <div class="course-list">
+        
+        <ul>
+          <li>Advanced Object Oriented Programming</li>
+          <li>Software Tools</li>
+          <li>Fundamentals of Data Structures</li>
+          <li>Professional Practice in Computing</li>
+          <li>Software Design</li>
+          <li>Introduction to Database Systems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--education end-->
+
+<!--skills start-->
+<section id="skills" class="skills-section">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-grid">
+    <!-- JavaScript -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-js.gif" alt="JavaScript" />
+      <p class="skill-name">JavaScript</p>
+    </div>
+    <!-- React -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-react-40.png" alt="React" />
+      <p class="skill-name">React</p>
+    </div>
+    <!-- Node.js -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-nodejs-48.png" alt="Node.js" />
+      <p class="skill-name">Node.js</p>
+    </div>
+    <!-- HTML -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-html-48.png" alt="HTML" />
+      <p class="skill-name">HTML</p>
+    </div>
+    <!-- CSS -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-css-100.png" alt="CSS" />
+      <p class="skill-name">CSS</p>
+    </div>
+    <!-- Git -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-git.gif" alt="Git" />
+      <p class="skill-name">Git</p>
+    </div>
+    <!-- MySQL -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-mysql-48.png" alt="MySQL" />
+      <p class="skill-name">MySQL</p>
+    </div>
+    <!-- Java -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-java.gif" alt="Java" />
+      <p class="skill-name">Java</p>
+    </div>
+    <!-- Data Structures -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-data-structure-64.png" alt="Data Structures" />
+      <p class="skill-name">Data Structures</p>
+    </div>
+    <!-- Algorithms -->
+    <div class="skill">
+      <img src="./assets/imgs/icons8-algorithm-48.png" alt="Algorithms" />
+      <p class="skill-name">Algorithms</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ------------------skills end -------------------->
+
+<!-----------------------contact --------------------->
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section">
+  <h2 class="section-title">Let's Connect! 🎉</h2>
+  <p class="contact-description">
+    Got a question, an opportunity, or just want to say hi? Fill out the form below, and let's make magic happen! 🚀
+  </p>
+
+  <form id="contact-form" class="contact-form">
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" id="name" name="name" placeholder="👋 Your Name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="email" id="email" name="email" placeholder="📧 Your Email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="message"></label>
+      <textarea id="message" name="message" rows="5" placeholder="💬 Type your Message ..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-button">
+      🚀 Send Message
+    </button>
+  </form>
+</section>
+
+<!-- Notification Popup -->
+<div id="notification" class="notification">
+  🎉 Message sent successfully! 🎉
+</div>
+
+<!----------------------------contact end -------------------------->
+
+
+
+
+
+<!------------------footer----------------------------------------->
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="#home" class="footer-link">Home</a>
+      <a href="#projects" class="footer-link">Projects</a>
+      <a href="#skills" class="footer-link">Skills</a>
+      <a href="#education" class="footer-link">Education</a>
+      <a href="#contact" class="footer-link">Contact</a>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-social">
+      <a href="https://github.com/zeeshanrw" target="_blank" class="social-icon">
+        <img src="./assets/imgs/github.png" alt="GitHub" />
+      </a>
+      <a href="https://linkedin.com/in/zeeshan-rafaqat" target="_blank" class="social-icon">
+        <img src="./assets/imgs/linkedin.png" alt="LinkedIn" />
+      </a>
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="footer-copyright">
+      <p>&copy; 2024 Zeeshan Rafaqat | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<!-- Add this at the end of your HTML -->
+<a href="#home" class="home-icon">
+    <img src="./assets/imgs/home.png" alt="Home Icon" />
+  </a>
+  
+ 
+  <script src="index.js"></script>
+  
+</body>
+</html>

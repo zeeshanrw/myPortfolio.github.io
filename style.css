@@ -33,7 +33,7 @@ body.dark-mode .skill {
   background-color: #222f3d; /* Darker card background */
   color: #d8c3c3; /* Text color */
   border: 1px solid #233554; /* Subtle border */
-  box-shadow: 0 4px 8px rgba(255, 252, 252, 0.507);
+  box-shadow: 0 4px 8px rgba(255, 252, 252, 0.137);
 }
 body.dark-mode .education-card h3,
 body.dark-mode .education-card p {
@@ -46,7 +46,7 @@ body.dark-mode .courses-title{
 body.dark-mode .skill:hover,
 body.dark-mode .education-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.281);
 }
 body.dark-mode .skill-name{
   color: #d8c3c3;
@@ -84,13 +84,13 @@ body.dark-mode .theme-toggle {
 /* Dark Mode for Courses Section */
 body.dark-mode .course-list {
   background-color: #222f3d; /* Darker background for cards */
-  box-shadow: 0 4px 8px rgb(255, 252, 252); /* Subtle light shadow */
+  box-shadow: 0 4px 8px rgba(255, 252, 252, 0.384); /* Subtle light shadow */
 }
 
 body.dark-mode .course-list li {
   background-color: #222f3d; /* Dark background for list items */
   color: #f0f4f8; /* Light text color */
-  box-shadow: 0 4px 8px rgba(255, 252, 252, 0.315);
+  box-shadow: 0 4px 8px rgba(255, 252, 252, 0.247);
 }
 
 body.dark-mode .course-list li:hover {
@@ -178,7 +178,87 @@ body.dark-mode .theme-toggle {
     color: #0a192f;
     font-weight: bold;
   }
-  
+  /* Menu Toggle Button Styling */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+}
+
+.menu-toggle img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Navbar Styling for Mobile View */
+@media (max-width: 768px) {
+  .menu-toggle {
+    background-color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 4px; /* Align to the top */
+  right: 15px; /* Move to the right corner */
+  width: 45px; /* Circle size */
+  height: 45px;
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Ensure it's above everything else */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .navbar {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: #7587a5;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  /* Keep navbar visible when hovering over the header-container */
+  .header-container:hover .navbar {
+    display: flex;
+  }
+
+  /* Menu Toggle Hover */
+  .menu-toggle:hover + .navbar {
+    display: flex;
+  }
+
+  /* Navigation Links */
+  .nav-link {
+    text-decoration: none;
+    color: #f0f4f8;
+    text-align: center;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: #233554;
+    border-radius: 8px;
+    color: white;
+  }
+}
+
+
   /* Weather Widget */
   .weather-widget {
     background-color: #ffffff; /* White background */
@@ -475,4 +555,233 @@ body.dark-mode .theme-toggle {
 .skill:hover {
   transform: scale(1.1); /* Slight zoom-in */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow lift */
+}
+
+/* Contact Section Styling */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .contact-section {
+  background-color: #363a42;
+  color: #f0f4f8;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0a192f;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .section-title {
+  color: #64ffda;
+}
+
+.contact-description {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .contact-description {
+  color: #d9e2ec;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .form-group label {
+  color: #f0f4f8;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 90%;
+  padding: 15px; /* Larger padding for a clean look */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #d1d5db; /* Light gray background */
+  font-size: 1rem;
+  color: #333; /* Darker text color */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #233554;
+  color: #f0f4f8;
+  border: 2px solid #64ffda;
+}
+.form-group textarea {
+  resize: none; /* Prevent resizing */
+  height: 150px; /* Fixed height for textarea */
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none; /* Remove default focus outline */
+  background-color: #e2e8f0; /* Slightly lighter background on focus */
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.5); /* Soft glow effect */
+}
+
+/* Submit Button Styling */
+.submit-button {
+  background-color: #64ffda;
+  color: #0a192f;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  display: inline-block; /* Ensures width matches content */
+  margin: 20px auto 0 auto; /* Center horizontally below textarea */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #0a192f;
+  color: #64ffda;
+  transform: scale(1.05);
+}
+
+body.dark-mode .submit-button {
+  background-color: #f0f4f8;
+  color: #112240;
+}
+
+body.dark-mode .submit-button:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+}
+/* Footer Styling */
+.footer {
+  background-color: #0a192f; /* Dark background */
+  color: #f0f4f8; /* Light text */
+  padding: 20px 10px;
+  text-align: center;
+  border-top: 2px solid #64ffda; /* Subtle border */
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #f0f4f8; /* Light text on hover */
+}
+
+/* Social Media Icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Footer Copyright */
+.footer-copyright p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #b0c4de; /* Light gray text */
+}
+
+/* Dark Mode Support */
+body.dark-mode .footer {
+  background-color: #112240; /* Darker footer in dark mode */
+}
+
+body.dark-mode .footer-link:hover {
+  color: #64ffda;
+}
+
+
+
+/* Notification Styling */
+.notification {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  background-color: #64ffda; /* Light green */
+  color: #0a192f; /* Text color */
+  font-size: 1.2rem;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: none; /* Initially hidden */
+  animation: fadeInOut 3s ease; /* Smooth fade animation */
+  z-index: 1000;
+}
+
+/* Fade In and Out Animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
 }

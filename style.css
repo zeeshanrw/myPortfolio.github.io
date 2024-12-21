@@ -162,8 +162,8 @@ img {
 
 }
 .navbar.scrolled {
-  backdrop-filter: blur(18px); /* Apply blur effect */
-  filter: brightness(0.8); /* Dim the brightness slightly */
+  backdrop-filter: blur(8px); /* Apply blur effect */
+  filter: brightness(0.9); /* Dim the brightness slightly */
 }
 .nav-link {
   color: #5e6c83;
